@@ -6,14 +6,14 @@
  */
 
 /* List of projects/orgs using your project for the users page */
-const users = [
+/*const users = [
   {
     caption: 'User1',
     image: 'img/ann_logo40pt.png',
     infoLink: 'https://www.annikken.com/',
     pinned: true,
   },
-];
+];*/
 
 const siteConfig = {
   title: 'Annikken Andee Documentation',
