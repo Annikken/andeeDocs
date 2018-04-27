@@ -23,7 +23,7 @@ const siteConfig = {
   organizationName: 'Annikken',
   projectName: 'annikken.github.io',
   headerLinks: [],
-  users,
+  //users,
   /* path to images for header/footer */
   headerIcon: 'img/ann_logo40pt.png',
   footerIcon: 'img/ann_logo40pt.png',
@@ -45,10 +45,10 @@ const siteConfig = {
     ]
   },*/
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright:
+  /* copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    'Annikken',
+    'Annikken', */
   // organizationName: 'Annikken', // or set an env variable ORGANIZATION_NAME
   // projectName: 'AndeeDocs', // or set an env variable PROJECT_NAME
   highlight: {

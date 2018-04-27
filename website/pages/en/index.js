@@ -76,7 +76,6 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
@@ -100,22 +99,39 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  /* <Block layout="fourColumn">
     {[
       {
-        content: 'just testing build',
-        image: imgUrl('andee/gb-andee-boards.png'),
-        imageAlign: 'top',
+		image: imgUrl('andee/gb-andee-boards.png'),
+        imageAlign: 'left',
         title: 'Andee Android/iOS/U',
       },
-      {
-        content: 'The content of my second feature',
-        image: imgUrl('andee/gb-andee-101.png'),
-        imageAlign: 'top',
-        title: 'Andee101',
+      {	   
+		  content: 'Learn ',
+		  title: '[Installation & Setup](docs/AndeeSetup.html)',  
+      },
+	  {
+        content: 'Guide and API Reference',
+        title: 'Andee for micro:bit',
+      },
+	  {
+        content: 'Guide and API Reference',
+        title: 'AndeeMobile',
       },
     ]}
-  </Block>
+  </Block> */
+  <Block id={"andeeBlock"} background={"dark"}>
+  
+  <div id={"div1"}>
+  
+  </div>
+  
+  <div id={"div2"}>
+  
+  </div>
+  
+  </Block>  
+   
 );
 
 const FeatureCallout = props => (
@@ -166,36 +182,6 @@ const Description = props => (
   </Block>
 );
 
-const Showcase = props => {
-  if ((siteConfig.users || []).length === 0) {
-    return null;
-  }
-  const showcase = siteConfig.users
-    .filter(user => {
-      return user.pinned;
-    })
-    .map((user, i) => {
-      return (
-        <a href={user.infoLink} key={i}>
-          <img src={user.image} alt={user.caption} title={user.caption} />
-        </a>
-      );
-    });
-
-  return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
-      <div className="logos">{showcase}</div>
-      <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
-        </a>
-      </div>
-    </div>
-  );
-};
-
 class Index extends React.Component {
   render() {
     let language = this.props.language || '';
@@ -204,12 +190,9 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
-          <LearnHow />
+		  <Features />
           <TryOut />
           <Description />
-          <Showcase language={language} />
         </div>
       </div>
     );
